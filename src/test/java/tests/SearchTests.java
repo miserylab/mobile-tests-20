@@ -1,6 +1,8 @@
 package tests;
 
 import io.appium.java_client.AppiumBy;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
@@ -13,6 +15,8 @@ import static io.qameta.allure.Allure.step;
 public class SearchTests extends TestBase {
 
     @Test
+    @Tag("android")
+    @Tag("ios")
     void successfulSearchTest() {
         step("Type search", () -> {
             $(AppiumBy.accessibilityId("Search Wikipedia")).click();
@@ -24,6 +28,7 @@ public class SearchTests extends TestBase {
     }
 
     @Test
+    @Tag("android")
     void unsuccessfulArticleOpenTest() {
         step("Type search", () -> {
             $(AppiumBy.accessibilityId("Search Wikipedia")).click();
