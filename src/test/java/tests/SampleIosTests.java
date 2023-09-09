@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static io.qameta.allure.Allure.step;
 
-public class sampleIosTests extends TestBase  {
+public class SampleIosTests extends TestBase  {
     @Test
     @Tag("ios")
     void textFieldTest() {
